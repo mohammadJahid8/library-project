@@ -6,8 +6,6 @@ import { toast } from "sonner";
 const BookCardAdmin = ({ book, refetch }) => {
   const { _id } = book ?? {};
 
-  console.log({ book });
-
   const handleDelete = async (id) => {
     try {
       const res = await axios.delete(`/books/delete/${id}`);
